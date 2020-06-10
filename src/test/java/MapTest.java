@@ -45,7 +45,7 @@ public class MapTest {
     }
 
     @Test
-    public void getCapacityNotExceededLoadFactor () {
+    public void getCapacityNotExceededLoadFactor() {
         float loadFactor = 0.7f;
         int initialCapacity = 16;
         MapWithOpenAddressingImpl map =
@@ -57,7 +57,7 @@ public class MapTest {
     }
 
     @Test
-    public void getCapacityExceededLoadFactor () {
+    public void getCapacityExceededLoadFactor() {
         float loadFactor = 0.7f;
         int initialCapacity = 16;
         MapWithOpenAddressingImpl map =
