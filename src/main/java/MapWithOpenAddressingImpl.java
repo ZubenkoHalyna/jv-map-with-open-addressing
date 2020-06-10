@@ -42,10 +42,15 @@ public class MapWithOpenAddressingImpl implements MapWithOpenAddressing {
 
     @Override
     public long get(int key) {
-        for (int i = 0; i < data.length; i++) {
-            Node node = data[getIndex(key + i)];
+        int index = getIndex(key);
+        for (int counter = 0; counter < data.length; counter++) {
+            Node node = data[index];
             if (node != null && node.key == key) {
                 return node.value;
+            }
+            index++;
+            if (index == data.length) {
+                index = 0;
             }
         }
         return nullValue;
