@@ -44,9 +44,8 @@ public class MapWithOpenAddressingImpl implements MapWithOpenAddressing {
     public long get(int key) {
         int index = getIndex(key);
         for (int counter = 0; counter < data.length; counter++) {
-            Node node = data[index];
-            if (node != null && node.key == key) {
-                return node.value;
+            if (data[index] != null && data[index].key == key) {
+                return data[index].value;
             }
             index++;
             if (index == data.length) {
