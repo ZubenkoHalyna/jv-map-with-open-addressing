@@ -12,10 +12,10 @@ public class MapWithOpenAddressingImpl implements MapWithOpenAddressing {
         this(DEFAULT_CAPACITY, DEFAULT_LOAD_FACTOR, DEFAULT_NULL_VALUE);
     }
 
-    public MapWithOpenAddressingImpl(int mapCapacity, float loadFactor, long nullValue) {
+    public MapWithOpenAddressingImpl(int initialCapacity, float loadFactor, long nullValue) {
         this.loadFactor = loadFactor;
         this.nullValue = nullValue;
-        data = new Node[mapCapacity];
+        data = new Node[initialCapacity];
     }
 
     @Override
