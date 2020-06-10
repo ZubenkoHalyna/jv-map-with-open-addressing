@@ -50,7 +50,7 @@ public class MapTest {
         int initialCapacity = 16;
         MapWithOpenAddressingImpl map =
                 new MapWithOpenAddressingImpl(initialCapacity, loadFactor, -1);
-        for (int i = 0; i < initialCapacity * loadFactor; i++) {
+        for (int i = 0; i <= initialCapacity * loadFactor; i++) {
             map.put(i, i);
         }
         Assert.assertEquals(initialCapacity, map.getCapacity());
